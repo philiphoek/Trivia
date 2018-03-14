@@ -14,6 +14,9 @@
 		597FCEC82059158A00FFD62B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FCEC62059158A00FFD62B /* LaunchScreen.storyboard */; };
 		597FCED32059158A00FFD62B /* TriviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCED22059158A00FFD62B /* TriviaTests.swift */; };
 		597FCEDE2059158A00FFD62B /* TriviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEDD2059158A00FFD62B /* TriviaUITests.swift */; };
+		597FCEEC2059161400FFD62B /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEEB2059161400FFD62B /* QuestionData.swift */; };
+		597FCEEE2059176B00FFD62B /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEED2059176B00FFD62B /* QuestionController.swift */; };
+		597FCEF020591F9400FFD62B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEEF20591F9400FFD62B /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		597FCED92059158A00FFD62B /* TriviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		597FCEDD2059158A00FFD62B /* TriviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaUITests.swift; sourceTree = "<group>"; };
 		597FCEDF2059158A00FFD62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		597FCEEB2059161400FFD62B /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		597FCEED2059176B00FFD62B /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		597FCEEF20591F9400FFD62B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,11 @@
 				597FCEBD2059158900FFD62B /* AppDelegate.swift */,
 				597FCEBF2059158900FFD62B /* ViewController.swift */,
 				597FCEC12059158A00FFD62B /* Main.storyboard */,
+				597FCEEF20591F9400FFD62B /* QuestionViewController.swift */,
 				597FCEC42059158A00FFD62B /* Assets.xcassets */,
 				597FCEC62059158A00FFD62B /* LaunchScreen.storyboard */,
+				597FCEEB2059161400FFD62B /* QuestionData.swift */,
+				597FCEED2059176B00FFD62B /* QuestionController.swift */,
 				597FCEC92059158A00FFD62B /* Info.plist */,
 			);
 			path = Trivia;
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597FCEEC2059161400FFD62B /* QuestionData.swift in Sources */,
+				597FCEF020591F9400FFD62B /* QuestionViewController.swift in Sources */,
 				597FCEC02059158900FFD62B /* ViewController.swift in Sources */,
 				597FCEBE2059158900FFD62B /* AppDelegate.swift in Sources */,
+				597FCEEE2059176B00FFD62B /* QuestionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
