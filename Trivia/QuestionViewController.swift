@@ -19,7 +19,6 @@ class QuestionViewController: UIViewController {
     var questions = [QuestionItem]()
     
     var answer = ""
-    var submittedAnswer = ""
     
     let amountQuestions = 10
     var questionIndex = 0
@@ -48,14 +47,19 @@ class QuestionViewController: UIViewController {
         // update UI with new question
         DispatchQueue.main.async {
             self.questionLabel.text = questions[0].question
-            self.answer = questions[0].question
-            print(questions[0].answer)
+            self.answer = questions[0].answer
+            print(self.answer)
         }
+    }
+    
+    func updateAnswer() {
+        let submittedAnswer = answerTextField.text!
     }
     
     @IBAction func submitAnswerButtonTapped(_ sender: UIButton) {
         //fetch next question when answer is submitted
         questionIndex += 1
+        let submittedAnswer = answerTextField.text!
         if questionIndex <= amountQuestions && answer == submittedAnswer {
             fetchQuestion()
             totalPoints += 1
@@ -68,10 +72,14 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    @IBAction func answerEdited(_ sender: Any) {
-        submittedAnswer = answerTextField.text!
-        print(submittedAnswer)
+    @IBAction func answerEdited(_ sender: UITextField) {
+        updateAnswer()
     }
+    
+    @IBAction func returnPressed(_ sender: UITextField) {
+        answerTextField.resignFirstResponder()
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

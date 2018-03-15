@@ -98,7 +98,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="answerEdited:" destination="m9D-99-Y1B" eventType="editingDidEnd" id="TzG-VU-QPt"/>
+                                    <action selector="answerEdited:" destination="m9D-99-Y1B" eventType="editingChanged" id="aE3-Ji-fHF"/>
+                                    <action selector="returnPressed:" destination="m9D-99-Y1B" eventType="primaryActionTriggered" id="4AM-cI-AfG"/>
                                 </connections>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HMt-tY-zdh">
