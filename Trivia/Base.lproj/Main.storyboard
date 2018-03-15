@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cPz-p1-plr">
-                                <rect key="frame" x="35" y="303.5" width="305" height="61.5"/>
+                                <rect key="frame" x="35" y="288.5" width="305" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready To Start Trivia?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3e-tQ-fGz">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="31.5"/>
@@ -28,11 +28,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imr-Ux-Bty">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RRl-Wh-1Wm">
                                         <rect key="frame" x="0.0" y="31.5" width="305" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="nameEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="IIU-cn-LVZ"/>
+                                            <action selector="returnPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="i8S-SB-prB"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imr-Ux-Bty">
+                                        <rect key="frame" x="0.0" y="61.5" width="305" height="30"/>
                                         <state key="normal" title="Begin The Quiz"/>
                                         <connections>
-                                            <segue destination="YcS-vt-Rvd" kind="show" id="yVd-aM-3f3"/>
+                                            <segue destination="YcS-vt-Rvd" kind="show" identifier="gameStarted" id="yVd-aM-3f3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -46,6 +56,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="RRl-Wh-1Wm" id="KGG-Df-urT"/>
+                        <outlet property="startGameButton" destination="Imr-Ux-Bty" id="8kp-Pa-SkN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
