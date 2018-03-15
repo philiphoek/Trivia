@@ -33,7 +33,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         fetchQuestion()
         updateAnswer()
-        scoreLabel.text = name + ": your score is: " + String(totalPoints)
+        scoreLabel.text = name + ", your score is: " + String(totalPoints)
     }
     
     func fetchQuestion() {
@@ -70,7 +70,7 @@ class QuestionViewController: UIViewController {
         if questionIndex <= amountQuestions && answer == submittedAnswer {
             fetchQuestion()
             totalPoints += 1
-            scoreLabel.text = name + ": your score is: " + String(totalPoints)
+            scoreLabel.text = name + ", your score is: " + String(totalPoints)
             print("right answer")
             answerTextField.text = ""
         } else if questionIndex <= amountQuestions {

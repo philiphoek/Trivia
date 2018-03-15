@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateStartButtonState()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -27,8 +28,10 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gameStarted" {
             let name = nameTextField.text!
-            let questionViewController = segue.destination as!
-            QuestionViewController
+            let navigationController = segue.destination as!
+            UINavigationController
+            let questionViewController = navigationController.childViewControllers.first as!
+                QuestionViewController
             questionViewController.name = name
         }
     }
