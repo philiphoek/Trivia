@@ -10,7 +10,9 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var answerTextField: UITextField!
     
@@ -28,6 +30,8 @@ class QuestionViewController: UIViewController {
         questionLabel.text = "Waiting for question..."
         super.viewDidLoad()
         fetchQuestion()
+        updateAnswer()
+        scoreLabel.text = "Score: " + String(totalPoints)
     }
     
     func fetchQuestion() {
@@ -54,6 +58,7 @@ class QuestionViewController: UIViewController {
     
     func updateAnswer() {
         let submittedAnswer = answerTextField.text!
+        submitButton.isEnabled = !submittedAnswer.isEmpty
     }
     
     @IBAction func submitAnswerButtonTapped(_ sender: UIButton) {
@@ -63,12 +68,16 @@ class QuestionViewController: UIViewController {
         if questionIndex <= amountQuestions && answer == submittedAnswer {
             fetchQuestion()
             totalPoints += 1
+            scoreLabel.text = "Score: " + String(totalPoints)
             print("right answer")
+            answerTextField.text = ""
         } else if questionIndex <= amountQuestions {
             fetchQuestion()
             print("wrong answer")
+            answerTextField.text = ""
         } else {
             self.questionLabel.text = "Your're Done"
+            answerTextField.isEnabled = false
         }
     }
     
