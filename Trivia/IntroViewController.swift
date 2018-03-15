@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntroViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var startGameButton: UIButton!
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             questionViewController.name = name
         }
     }
+    
     @IBAction func nameEdited(_ sender: UITextField) {
         updateStartButtonState()
     }
@@ -42,6 +43,12 @@ class ViewController: UIViewController {
     @IBAction func returnPressed(_ sender: UITextField) {
         nameTextField.resignFirstResponder()
     }
+    
+    @IBAction func unwindToIntro(segue:
+        UIStoryboardSegue) {
+        // Restarts the quiz
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

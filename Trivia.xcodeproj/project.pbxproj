@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		597FCEBE2059158900FFD62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEBD2059158900FFD62B /* AppDelegate.swift */; };
-		597FCEC02059158900FFD62B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEBF2059158900FFD62B /* ViewController.swift */; };
+		597FCEC02059158900FFD62B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEBF2059158900FFD62B /* IntroViewController.swift */; };
 		597FCEC32059158A00FFD62B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FCEC12059158A00FFD62B /* Main.storyboard */; };
 		597FCEC52059158A00FFD62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597FCEC42059158A00FFD62B /* Assets.xcassets */; };
 		597FCEC82059158A00FFD62B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FCEC62059158A00FFD62B /* LaunchScreen.storyboard */; };
@@ -17,6 +17,7 @@
 		597FCEEC2059161400FFD62B /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEEB2059161400FFD62B /* QuestionData.swift */; };
 		597FCEEE2059176B00FFD62B /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEED2059176B00FFD62B /* QuestionController.swift */; };
 		597FCEF020591F9400FFD62B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FCEEF20591F9400FFD62B /* QuestionViewController.swift */; };
+		59A2487D205AC1F90076D535 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A2487C205AC1F90076D535 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		597FCEBA2059158900FFD62B /* Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		597FCEBD2059158900FFD62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		597FCEBF2059158900FFD62B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		597FCEBF2059158900FFD62B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		597FCEC22059158A00FFD62B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		597FCEC42059158A00FFD62B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		597FCEC72059158A00FFD62B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		597FCEEB2059161400FFD62B /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		597FCEED2059176B00FFD62B /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		597FCEEF20591F9400FFD62B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		59A2487C205AC1F90076D535 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				597FCEBD2059158900FFD62B /* AppDelegate.swift */,
-				597FCEBF2059158900FFD62B /* ViewController.swift */,
 				597FCEC12059158A00FFD62B /* Main.storyboard */,
+				597FCEBF2059158900FFD62B /* IntroViewController.swift */,
 				597FCEEF20591F9400FFD62B /* QuestionViewController.swift */,
+				59A2487C205AC1F90076D535 /* ResultViewController.swift */,
 				597FCEC42059158A00FFD62B /* Assets.xcassets */,
 				597FCEC62059158A00FFD62B /* LaunchScreen.storyboard */,
 				597FCEEB2059161400FFD62B /* QuestionData.swift */,
@@ -270,9 +273,10 @@
 			files = (
 				597FCEEC2059161400FFD62B /* QuestionData.swift in Sources */,
 				597FCEF020591F9400FFD62B /* QuestionViewController.swift in Sources */,
-				597FCEC02059158900FFD62B /* ViewController.swift in Sources */,
+				597FCEC02059158900FFD62B /* IntroViewController.swift in Sources */,
 				597FCEBE2059158900FFD62B /* AppDelegate.swift in Sources */,
 				597FCEEE2059176B00FFD62B /* QuestionController.swift in Sources */,
+				59A2487D205AC1F90076D535 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

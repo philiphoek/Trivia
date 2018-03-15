@@ -34,7 +34,8 @@ struct QuestionItem: Codable {
     }
 }
 
-//struct QuestionItems: Codable {
-//    let items: [QuestionItem]
-//}
+struct Score: Codable {
+    var player: String
+    var points: Int
+}
 

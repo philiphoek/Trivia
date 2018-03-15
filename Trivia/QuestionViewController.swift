@@ -24,6 +24,8 @@ class QuestionViewController: UIViewController {
     
     var name: String!
     
+    var score: Score?
+    
     let amountQuestions = 10
     var questionIndex = 0
     var totalPoints = 0
@@ -78,8 +80,11 @@ class QuestionViewController: UIViewController {
             print("wrong answer")
             answerTextField.text = ""
         } else {
+            print(name)
+            score = Score(player: name, points: totalPoints)
             self.questionLabel.text = "Your're Done"
             answerTextField.isEnabled = false
+            performSegue(withIdentifier: "resultSegue", sender: nil)
         }
     }
     
@@ -91,6 +96,14 @@ class QuestionViewController: UIViewController {
         answerTextField.resignFirstResponder()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender:
+        Any?) {
+        if segue.identifier == "resultSegue" {
+            let resultViewController = segue.destination as!
+            ResultViewController
+            resultViewController.score = score
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

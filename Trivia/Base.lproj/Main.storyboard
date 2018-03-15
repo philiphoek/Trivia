@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,11 +156,53 @@
                         <outlet property="questionLabel" destination="fgW-lk-04V" id="sQZ-s4-3ph"/>
                         <outlet property="scoreLabel" destination="uUD-9X-B7M" id="eWX-ee-hJ7"/>
                         <outlet property="submitButton" destination="q46-z6-H4B" id="mbk-pL-z3q"/>
+                        <segue destination="Fpb-fq-3Zl" kind="show" identifier="resultSegue" id="UUn-GP-vkr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5O-i2-GNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="117"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="HQz-av-6Ee">
+            <objects>
+                <viewController id="Fpb-fq-3Zl" customClass="ResultViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Mm-OP-xRb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BA-pI-NRb">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2BA-pI-NRb" firstAttribute="centerX" secondItem="0Mm-OP-xRb" secondAttribute="centerX" id="06F-bT-kLT"/>
+                            <constraint firstItem="2BA-pI-NRb" firstAttribute="leading" secondItem="9MW-ee-O3l" secondAttribute="leading" constant="16" id="CUK-fy-wUf"/>
+                            <constraint firstItem="9MW-ee-O3l" firstAttribute="trailing" secondItem="2BA-pI-NRb" secondAttribute="trailing" constant="16" id="YtU-H7-0Vn"/>
+                            <constraint firstItem="2BA-pI-NRb" firstAttribute="centerY" secondItem="0Mm-OP-xRb" secondAttribute="centerY" id="oaC-W5-kl9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9MW-ee-O3l"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Result" id="J5U-gJ-CVa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="6Ui-IB-aOi">
+                            <connections>
+                                <segue destination="ftY-nQ-tot" kind="unwind" unwindAction="unwindToIntroWithSegue:" id="WqT-pl-ZzS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Highscores" id="GFG-rQ-9TD"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scoreLabel" destination="2BA-pI-NRb" id="8QZ-qp-4DN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q50-WH-mbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ftY-nQ-tot" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2345" y="117"/>
         </scene>
     </scenes>
 </document>
